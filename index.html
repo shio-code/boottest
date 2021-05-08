@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
 
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
@@ -146,6 +148,26 @@
         </div>
       </section>
 
+      <section>
+        <div class="container mb-4">
+          <h2 class="display-5 border-bottom border-secondary py-2">FAQ</h2>
+            <dl class="">
+              <div class="mb-3">
+                <dt>作者は誰ですか？</dt>
+                <dd>大学生です。プログラマー見習いです。</dd>
+              </div>
+              <div class="mb-3">
+                <dt>このページの制作期間はどれくらいですか？</dt>
+                <dd>3時間程です。勉強期間にして3-4ヵ月といったところです。</dd>
+              </div>
+              <div class="mb-3">
+                <dt>プログラミングは楽しいですか？</dt>
+                <dd>基礎が終わったくらいからは面白いです。まだまだ頭を掻きながらですが頑張ります。</dd>
+              </div>
+            </dl>
+        </div>
+      </section>
+
       <section class="bg-light text-center py-5">
         <a href="action.html" class="btn btn-primary btn-lg">Get It Now!</a>
       </section>
@@ -163,9 +185,27 @@
 
     <script>
       'use strict';
+
       $(function(){
         $('[data-toggle="tooltip"]').tooltip();
       });
+
+    {
+      const dts = document.querySelectorAll('dt');
+
+      dts.forEach(dt => {
+        dt.addEventListener('click',()=>{
+          dt.parentNode.classList.toggle('appear');
+        });
+
+        dts.forEach(el=>{
+          if(dt !== el){
+            el.parentNode.classList.remove('appear');
+          }
+        });
+      });
+    }
+
     </script>
 
   </body>
