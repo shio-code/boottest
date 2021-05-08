@@ -112,6 +112,7 @@ footer{
 	position: fixed;
   right: 32px;
   top: 32px;
+	font-size: 0.8rem;
 
 	animation: popup 3s forwards;
 	animation-timing-function: ease-out;
